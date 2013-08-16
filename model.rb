@@ -5,7 +5,7 @@ class Deck
   def initialize(source_file = 'flashcard_samples.txt')
     @source_file = source_file
     @deck = []
-    do_that_shit!
+    create_deck
     shuffle
   end
 
@@ -16,7 +16,7 @@ class Deck
     p a.each_slice(2).to_a
   end
 
-  def do_that_shit!
+  def create_deck
     read_file.each do |term_def|
       @deck << Card.new(term_def[1], term_def[0])
     end
