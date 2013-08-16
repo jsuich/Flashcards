@@ -16,7 +16,7 @@ class Controller
   end
 
   def run_game(num_questions)
-    @game_deck = @deck(0..5)
+    @game_deck = @deck[0..5]
     test_question(@game_deck)
   end
 
@@ -27,7 +27,6 @@ class Controller
     @card.term == answer_prompt_return ? test_question(@game_deck)
     end
   end
-  
-end
 
+end
 
