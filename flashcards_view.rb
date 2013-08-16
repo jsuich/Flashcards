@@ -1,6 +1,4 @@
 class View
-
-  attr_reader :screen
   attr_accessor :input
 
   def initialize

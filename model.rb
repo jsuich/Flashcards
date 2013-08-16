@@ -1,6 +1,6 @@
 
 class Deck
-  attr_reader :filename, :deck
+  attr_reader :source_file, :deck
 
   def initialize(source_file = 'flashcard_samples.txt')
     @source_file = source_file
@@ -10,7 +10,7 @@ class Deck
   end
 
   def read_file
-    f = File.open(filename)
+    f = File.open(source_file)
     a = f.readlines
     a.map! {|x| x.chomp}.reject! { |x| x.empty? }
     p a.each_slice(2).to_a
@@ -37,7 +37,5 @@ class Card
 end
 
 
-p my_deck = Deck.new('flashcard_samples.txt')
-my_card = Card.new("Altoids", "minty things")
-p my_card.term == "Altoids"
-p my_card.definition == "minty things"
+p my_deck = Deck.new
+p my_deck.read_file.length
