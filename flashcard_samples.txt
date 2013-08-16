@@ -1,6 +1,5 @@
 To create a second name for the variable or method.
 alias
-<<<<<<< HEAD
 
 A command that appends two or more objects together.
 and

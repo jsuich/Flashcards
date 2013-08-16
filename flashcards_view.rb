@@ -2,33 +2,33 @@ class View
   attr_accessor :input
 
   def initialize
-    landing_screen
-    definition_prompt
-    get_input
+    # landing_screen
+    # get_input
   end
 
   def landing_screen
-    "Welcome to Ruby Flash Cards. To play, just enter the correct term \
-    for each definition.  Ready?  Go!\n"
+    puts "Welcome to Ruby Flash Cards. To play, just enter the correct term for each definition.  Ready?  Go!\n\n"
   end
   
   def definition_prompt(card)
-    puts "Definition"
+    puts "Definition:"
     puts card.definition
+    puts
   end
 
   def get_input
-    puts "Guess: "
+    print "Guess: "
     @input = gets.chomp
+    # puts "user input is #{@input}"
   end
 
   def answer_correct
     puts "Correct!"
+    puts
   end
   
   def answer_incorrect
     puts "Incorrect! Try again, loser."
-    get_input
   end
   
 

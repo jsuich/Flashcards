@@ -13,7 +13,7 @@ class Deck
     f = File.open(source_file)
     a = f.readlines
     a.map! {|x| x.chomp}.reject! { |x| x.empty? }
-    p a.each_slice(2).to_a
+    a.each_slice(2).to_a
   end
 
   def create_deck
@@ -36,6 +36,3 @@ class Card
   end
 end
 
-
-p my_deck = Deck.new
-p my_deck.read_file.length
